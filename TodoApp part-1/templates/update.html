@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block title %}Todo App{% endblock %} {% block page_content %}
+<br / >
+<br />
+<div style="margin-left: 30%; border:double 5px; width:430px; height:230px ">     
+
+        <form action="{{ url_for('edit', id=id) }}" method="POST">
+                <h1 style="font-size:24px; font-weight:bold;color:firebrick; text-align:center">Todo Update</h1>
+                <span style="font-size:18px; font-weight:bold ; color:darkslateblue; margin-left:20px ">Title</span>
+                <input type="text" name="updatetitle" value='' required="required" style="margin-left:60px; width:250px">
+                <br /><br />
+                <span style="font-size:18px; font-weight:bold; color:darkslateblue;margin-left:20px">Description</span>
+                <input type="text" name="updateDescription" value='' required="required" style=" width:250px">
+                <br /> <br />
+                <button type="submit" style="color:darkslateblue; background-color:rgba(169, 169, 169, 0.137); width:300px; height:40px;font-weight:bold; margin-left:80px ">Update</button>
+        </form>
+
+
+
+
+
+       
+</div>
+
+</html>
+{% endblock %}

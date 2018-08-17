@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Todo App{% endblock %}
+
+{% block page_content %}
+
+<h1>Todo List</h1>
+
+<div>
+      
+    {%for todoes in todos %}
+    <span>
+    <span style="font-size: 24pt; font-weight:bold ">Title: </span>
+    <span style="font-size: 18pt; font-weight:bold; color:darkcyan ">{{todoes.title}}   </span>
+    <span style="font-size: 24pt; font-weight:bold "> Description:  </span>
+    <span style="font-size: 18pt; font-weight:bold; color:darkcyan ">{{todoes.description}} </span>
+    <button type="submit" ><a href="{{ url_for('delete', id=todoes._id) }}" >Delete</a></button>
+    <button type="submit"><a href="{{ url_for('update', id=todoes._id) }}"> Edit</a></button>
+    </span>
+    <br />
+    
+    {% endfor %}
+
+ 
+   
+    </div>
+{% endblock %}
