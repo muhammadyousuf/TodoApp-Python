@@ -54,7 +54,7 @@ def create_todo():
     mytodo = Mytodo(todoTitle=data['title'], todoDes=data['description'], todoDone=False)
     mydb.session.add(mytodo)
     mydb.session.commit()
-    return jsonify ({'result':'Added Data sucessufully Store'})
+    return jsonify ({'result':'Added Data sucessufully Store Congrats'})
 
 @app.route('/todoapp/api/v1.0/yousuf/<id>', methods=['PUT'])
 def update_todo(id):
